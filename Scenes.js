@@ -2,8 +2,8 @@ const { Markup, Scenes } = require('telegraf');
 const math = require('mathjs');
 
 function matrixCorrector(matrix) {
-  matrix = matrix.split(';');
-  matrix.map((el, idx) => (matrix[idx] = el.split(',')));
+  matrix = matrix.split(',');
+  matrix.map((el, idx) => (matrix[idx] = el.split(' ')));
   function strArrToNumArr(arr) {
     return arr.map((item) => {
       return item.map((x) => eval(x));
